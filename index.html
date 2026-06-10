@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabela Oficial Passalacqua — Copa 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-bg-ball">⚽</div>
+  <div class="brand">
+    <img src="logo-passalacqua.png" alt="Passalacqua Indústria">
+  </div>
+  <div class="hero-text">
+    <span class="eyebrow">Acompanhamento interno</span>
+    <h1>Copa do Mundo FIFA 2026</h1>
+    <p>Tabela Oficial Passalacqua · grupos, jogos e mata-mata automático</p>
+  </div>
+</header>
+
+<section class="scoreboard">
+  <div class="score-card brazil-card" id="brazilBox"></div>
+  <div class="score-card compact-card">
+    <span>🏆 Formato</span>
+    <strong>48 seleções · 104 jogos</strong>
+  </div>
+  <div class="score-card compact-card">
+    <span>🔐 Acesso</span>
+    <strong id="modeLabel">Funcionário</strong>
+  </div>
+</section>
+
+<section class="topbar">
+  <div class="tabs">
+    <button id="tab-class" class="active" onclick="tab('class')">📊 Classificação</button>
+    <button id="tab-jogos" onclick="tab('jogos')">📅 Jogos</button>
+    <button id="tab-mata" onclick="tab('mata')">🏆 Mata-mata</button>
+  </div>
+  <div class="actions">
+    <button onclick="copySummary()">📋 Copiar resumo</button>
+    <button onclick="toggleFullscreen()">🖥️ Modo TV</button>
+    <button onclick="adminLogin()" id="adminBtn">🔒 Admin</button>
+    <button onclick="adminLogout()" id="logoutBtn" class="hidden">🔓 Sair admin</button>
+    <button onclick="clearScores()" id="clearBtn" class="hidden danger">🧹 Limpar</button>
+  </div>
+</section>
+
+<div class="notice" id="notice">Modo funcionário: apenas visualização. Para alterar placares, entrar como administrador.</div>
+
+<main>
+  <section id="class" class="section active"></section>
+  <section id="jogos" class="section"></section>
+  <section id="mata" class="section"></section>
+</main>
+
+<div id="overlay" class="overlay">
+ <div class="modal">
+  <h2 id="mtitle"></h2>
+  <div class="modalteams">
+   <div class="mteam"><span id="fa"></span><div id="na"></div></div>
+   <div class="inputs"><input type="number" min="0" id="ga"><b>×</b><input type="number" min="0" id="gb"></div>
+   <div class="mteam"><span id="fb"></span><div id="nb"></div></div>
+  </div>
+  <div id="penbox" class="pen">Pênaltis: <input type="number" min="0" id="pa"> × <input type="number" min="0" id="pb"> <span>só em empate no mata-mata</span></div>
+  <div class="statusBtns">
+   <button id="s0" onclick="setStatus('agendado')">📅 Agendado</button>
+   <button id="s1" onclick="setStatus('ao_vivo')">🔴 Ao vivo</button>
+   <button id="s2" onclick="setStatus('encerrado')">✅ Encerrado</button>
+  </div>
+  <div class="modalBtns"><button class="cancel" onclick="closeModal()">Cancelar</button><button class="save" onclick="saveMatch()">Salvar</button></div>
+ </div>
+</div>
+
+<footer>
+  Desenvolvido para acompanhamento interno dos colaboradores Passalacqua.
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
