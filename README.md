@@ -1,13 +1,13 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 2.
+Versão 3.
 
 Correções:
-- Card do próximo jogo do Brasil compactado.
-- Logo reduzida.
-- Mata-mata não mostra times antes dos grupos serem encerrados.
-- 32 avos usa placeholders até a classificação estar definida.
-- Arquivos não minificados para facilitar conferência.
+- Bandeiras por imagem via FlagCDN.
+- Não aparecem mais siglas BR, MA, ZA etc.
+- Card do Brasil compacto.
+- Mata-mata com placeholders até os grupos serem encerrados.
+- Arquivos não minificados.
 
 Senha admin:
 PassaCopa26

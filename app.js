@@ -58,28 +58,21 @@ function persist() {
 
   for (var i = 0; i < matches.length; i++) {
     var m = matches[i];
-    s[m.num] = {
-      gA: m.gA,
-      gB: m.gB,
-      pA: m.pA,
-      pB: m.pB,
-      status: m.status
-    };
+    s[m.num] = { gA: m.gA, gB: m.gB, pA: m.pA, pB: m.pB, status: m.status };
   }
 
-  try {
-    localStorage.setItem(KEY, JSON.stringify(s));
-  } catch(e) {}
+  try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e) {}
 }
 
-function flag(n) {
+function flagCode(n) {
   return DATA.teams[n] || '';
 }
 
-function flagSpan(n, extra) {
-  var fl = flag(n);
-  if (!fl) return '';
-  return '<span class="flag ' + (extra || '') + '">' + fl + '</span>';
+function flagImg(n, extra) {
+  var code = flagCode(n);
+  if (!code) return '';
+
+  return '<img class="flag-img ' + (extra || '') + '" src="https://flagcdn.com/w80/' + code.toLowerCase() + '.png" alt="' + n + '" loading="lazy">';
 }
 
 function isRealTeam(name) {
@@ -88,8 +81,9 @@ function isRealTeam(name) {
 
 function teamLabel(name, big) {
   if (isRealTeam(name)) {
-    return flagSpan(name, big ? 'big' : '') + '<span>' + name + '</span>';
+    return flagImg(name, big ? 'big' : '') + '<span>' + name + '</span>';
   }
+
   return '<span class="placeholder">' + name + '</span>';
 }
 
@@ -131,26 +125,14 @@ function groupTables() {
   for (var g in DATA.groups) {
     for (var i = 0; i < DATA.groups[g].length; i++) {
       var n = DATA.groups[g][i];
-      st[n] = {
-        team: n,
-        group: g,
-        j: 0,
-        v: 0,
-        e: 0,
-        d: 0,
-        gp: 0,
-        gc: 0,
-        pts: 0
-      };
+      st[n] = { team: n, group: g, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, pts: 0 };
     }
   }
 
   for (var j = 0; j < matches.length; j++) {
     var m = matches[j];
 
-    if (m.type !== 'group' || m.status !== 'encerrado' || m.gA == null || m.gB == null) {
-      continue;
-    }
+    if (m.type !== 'group' || m.status !== 'encerrado' || m.gA == null || m.gB == null) continue;
 
     var a = st[m.a];
     var b = st[m.b];
@@ -195,9 +177,7 @@ function groupTables() {
   return tabs;
 }
 
-function gd(t) {
-  return t.gp - t.gc;
-}
+function gd(t) { return t.gp - t.gc; }
 
 function sortTeam(a, b) {
   return (b.pts - a.pts) ||
@@ -366,11 +346,11 @@ function renderBrazilBox() {
 
     if ((m.a === 'Brasil' || m.b === 'Brasil') && m.status !== 'encerrado') {
       html =
-        '<span>🇧🇷 Próximo jogo do Brasil</span>' +
+        '<span class="label">🇧🇷 Próximo jogo do Brasil</span>' +
         '<div class="brazil-match-line">' +
-          '<div class="brazil-team">' + flagSpan(m.a, 'big') + '<strong>' + m.a + '</strong></div>' +
+          '<div class="brazil-team">' + flagImg(m.a, 'big') + '<strong>' + m.a + '</strong></div>' +
           '<div class="versus-pill">×</div>' +
-          '<div class="brazil-team">' + flagSpan(m.b, 'big') + '<strong>' + m.b + '</strong></div>' +
+          '<div class="brazil-team">' + flagImg(m.b, 'big') + '<strong>' + m.b + '</strong></div>' +
         '</div>' +
         '<small class="brazil-meta">📅 ' + m.date + ' · 🕒 ' + m.time + ' · 📍 ' + m.city + '</small>';
 
@@ -380,7 +360,7 @@ function renderBrazilBox() {
 
   if (!html) {
     html =
-      '<span>🇧🇷 Brasil</span>' +
+      '<span class="label">🇧🇷 Brasil</span>' +
       '<strong>Todos os jogos da fase de grupos encerrados</strong>';
   }
 
@@ -404,7 +384,7 @@ function renderClass() {
       var qual = p <= 2 ? 'qualify' : '';
 
       html += '<tr class="' + qual + '">';
-      html += '<td><div class="team-cell"><span class="pos ' + pc + '">' + p + '</span>' + flagSpan(t.team) + '<b>' + t.team + '</b></div></td>';
+      html += '<td><div class="team-cell"><span class="pos ' + pc + '">' + p + '</span>' + flagImg(t.team) + '<b>' + t.team + '</b></div></td>';
       html += '<td>' + t.j + '</td><td>' + t.v + '</td><td>' + t.e + '</td><td>' + t.d + '</td>';
       html += '<td class="' + sc + '">' + (sgd > 0 ? '+' : '') + sgd + '</td>';
       html += '<td>' + t.gp + '</td><td class="pts">' + t.pts + '</td>';
@@ -427,7 +407,7 @@ function renderClass() {
 
     html += '<tr class="' + pc2 + '">';
     html += '<td>' + (j + 1) + '</td>';
-    html += '<td><div class="team-cell">' + flagSpan(t2.team) + '<b>' + t2.team + '</b></div></td>';
+    html += '<td><div class="team-cell">' + flagImg(t2.team) + '<b>' + t2.team + '</b></div></td>';
     html += '<td>' + t2.group + '</td><td class="pts">' + t2.pts + '</td><td>' + gd(t2) + '</td><td>' + t2.gp + '</td><td>' + ok + '</td>';
     html += '</tr>';
   }
@@ -537,8 +517,8 @@ function openMatch(idx) {
   var names = m.type === 'ko' ? knockoutNames()[m.num] : {a: m.a, b: m.b};
 
   document.getElementById('mtitle').innerHTML = 'Jogo ' + m.num + ' · ' + m.stage + ' · ' + m.date + ' · ' + m.time;
-  document.getElementById('fa').innerHTML = flag(names.a);
-  document.getElementById('fb').innerHTML = flag(names.b);
+  document.getElementById('fa').innerHTML = flagImg(names.a, 'big');
+  document.getElementById('fb').innerHTML = flagImg(names.b, 'big');
   document.getElementById('na').innerHTML = names.a;
   document.getElementById('nb').innerHTML = names.b;
   document.getElementById('ga').value = m.gA == null ? '' : m.gA;
@@ -559,9 +539,7 @@ function setStatus(s) {
   document.getElementById('s2').className = s === 'encerrado' ? 'sel' : '';
 }
 
-function closeModal() {
-  document.getElementById('overlay').className = 'overlay';
-}
+function closeModal() { document.getElementById('overlay').className = 'overlay'; }
 
 function saveMatch() {
   var m = matches[editIndex];
@@ -600,15 +578,13 @@ function copySummary() {
 
     for (var i = 0; i < tabs[g].length; i++) {
       var t = tabs[g][i];
-      txt += (i + 1) + 'º ' + flag(t.team) + ' ' + t.team + ' — ' + t.pts + ' pts | SG ' + gd(t) + '\\n';
+      txt += (i + 1) + 'º ' + t.team + ' — ' + t.pts + ' pts | SG ' + gd(t) + '\\n';
     }
   }
 
   var f = winnerOf(104);
 
-  if (f) {
-    txt += '\\n🏆 Campeão: ' + flag(f) + ' ' + f + '\\n';
-  }
+  if (f) txt += '\\n🏆 Campeão: ' + f + '\\n';
 
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(txt).then(function() {
@@ -623,12 +599,9 @@ function copySummary() {
 
 function clearScores() {
   if (!isAdmin) return;
-
   if (!confirm('Apagar todos os placares salvos neste navegador?')) return;
 
-  try {
-    localStorage.removeItem(KEY);
-  } catch(e) {}
+  try { localStorage.removeItem(KEY); } catch(e) {}
 
   init();
   toast('Placares apagados.');
