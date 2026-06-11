@@ -1,16 +1,16 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 5 — sem cache.
+Versão 6.
 
-Arquivos principais:
+Correção principal:
+- Botão Copiar resumo agora gera o resumo dos jogos encerrados do dia anterior.
+- Inclui resultados, classificação dos grupos impactados, próximo jogo do Brasil e link da tabela.
+
+Arquivos:
 - index.html
-- style-v5.css
-- data-v5.js
-- app-v5.js
+- style-v6.css
+- data-v6.js
+- app-v6.js
 - logo-passalacqua.png
 
-Importante:
-O index.html aponta para arquivos com nomes novos. Isso evita que GitHub Pages ou navegador carreguem versões antigas de app.js/data.js/style.css.
-
-Senha admin:
-PassaCopa26
+Senha admin: PassaCopa26
