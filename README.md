@@ -1,13 +1,21 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 7 — resumo corrigido.
+Versão 8 — integrada ao Google Sheets.
 
-Correções:
-- Botão "Copiar resumo" agora gera resumo dos jogos encerrados do dia anterior.
-- Usa quebras de linha reais, não \n literal.
-- Mostra apenas grupos impactados pelos jogos de ontem.
-- Inclui próximo jogo do Brasil.
-- Mantém bandeiras em imagem na página e emojis no texto do WhatsApp.
+Arquivos:
+- index.html
+- style-v8.css
+- data-v8.js
+- app-v8.js
+- logo-passalacqua.png
+
+API Apps Script:
+https://script.google.com/macros/s/AKfycbyc_84DuzwtrrnTWRr2icNYl4_lLbZ53Ipew40bkGs_R9AJMgzsVO-1ln8G6SDOtFEq/exec
+
+Funcionamento:
+- Ao abrir a página, busca os resultados da planilha.
+- Ao salvar placar em modo Admin, grava na planilha.
+- Todos os funcionários veem os mesmos resultados.
 
 Senha admin:
 PassaCopa26
