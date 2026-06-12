@@ -1,21 +1,14 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 8 — integrada ao Google Sheets.
+Versão 9 — gravação via Apps Script GET/JSONP.
 
-Arquivos:
-- index.html
-- style-v8.css
-- data-v8.js
-- app-v8.js
-- logo-passalacqua.png
+Correção:
+- A gravação dos placares não usa mais POST/fetch.
+- Agora grava via GET/JSONP, mais compatível com GitHub Pages + Apps Script.
+- Continua lendo os resultados da planilha ao abrir.
 
 API Apps Script:
 https://script.google.com/macros/s/AKfycbyc_84DuzwtrrnTWRr2icNYl4_lLbZ53Ipew40bkGs_R9AJMgzsVO-1ln8G6SDOtFEq/exec
-
-Funcionamento:
-- Ao abrir a página, busca os resultados da planilha.
-- Ao salvar placar em modo Admin, grava na planilha.
-- Todos os funcionários veem os mesmos resultados.
 
 Senha admin:
 PassaCopa26
