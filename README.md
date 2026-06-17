@@ -1,18 +1,13 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 10 — resumo diário ampliado.
+Versão 11 — resumo diário corrigido.
 
 Correção:
-- Botão "Copiar resumo" agora inclui:
-  - resultados de ontem;
-  - classificação dos grupos impactados;
-  - jogos de hoje;
-  - destaque do Brasil quando houver jogo do Brasil no dia;
-  - principal jogo do dia quando não houver Brasil;
-  - link da tabela.
+- O botão "Copiar resumo" foi sobrescrito diretamente no final do app-v11.js.
+- Agora inclui resultados de ontem, classificação dos grupos impactados, jogos de hoje e destaque do Brasil.
 
 Integração:
-- Continua salvando e lendo resultados da planilha via Apps Script.
+- Mantém leitura/gravação via Google Sheets + Apps Script.
 
 Senha admin:
 PassaCopa26
