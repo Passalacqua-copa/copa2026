@@ -1,14 +1,18 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 9 — gravação via Apps Script GET/JSONP.
+Versão 10 — resumo diário ampliado.
 
 Correção:
-- A gravação dos placares não usa mais POST/fetch.
-- Agora grava via GET/JSONP, mais compatível com GitHub Pages + Apps Script.
-- Continua lendo os resultados da planilha ao abrir.
+- Botão "Copiar resumo" agora inclui:
+  - resultados de ontem;
+  - classificação dos grupos impactados;
+  - jogos de hoje;
+  - destaque do Brasil quando houver jogo do Brasil no dia;
+  - principal jogo do dia quando não houver Brasil;
+  - link da tabela.
 
-API Apps Script:
-https://script.google.com/macros/s/AKfycbyc_84DuzwtrrnTWRr2icNYl4_lLbZ53Ipew40bkGs_R9AJMgzsVO-1ln8G6SDOtFEq/exec
+Integração:
+- Continua salvando e lendo resultados da planilha via Apps Script.
 
 Senha admin:
 PassaCopa26
