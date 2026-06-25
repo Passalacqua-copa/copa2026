@@ -1,10 +1,11 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 11 — resumo diário corrigido.
+Versão 12 — ajuste mobile mata-mata.
 
 Correção:
-- O botão "Copiar resumo" foi sobrescrito diretamente no final do app-v11.js.
-- Agora inclui resultados de ontem, classificação dos grupos impactados, jogos de hoje e destaque do Brasil.
+- No mobile, os jogos do mata-mata agora exibem data e local.
+- Ajuste apenas visual/CSS.
+- Não altera a planilha nem apaga resultados.
 
 Integração:
 - Mantém leitura/gravação via Google Sheets + Apps Script.
