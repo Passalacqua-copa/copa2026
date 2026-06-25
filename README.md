@@ -1,10 +1,12 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 12 — ajuste mobile mata-mata.
+Versão 13 — chaveamento visual.
 
-Correção:
-- No mobile, os jogos do mata-mata agora exibem data e local.
-- Ajuste apenas visual/CSS.
+Inclusão:
+- Aba Mata-mata mantém a lista de jogos.
+- Abaixo, foi adicionada a visão "Chaveamento do mata-mata".
+- O chaveamento usa os mesmos dados automáticos já existentes.
+- Ajuste apenas visual/funcional na interface.
 - Não altera a planilha nem apaga resultados.
 
 Integração:
