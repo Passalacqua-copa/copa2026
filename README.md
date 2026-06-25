@@ -1,16 +1,16 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 13 — chaveamento visual.
+Versão 14 — chaveamento em aba separada.
 
 Inclusão:
-- Aba Mata-mata mantém a lista de jogos.
-- Abaixo, foi adicionada a visão "Chaveamento do mata-mata".
-- O chaveamento usa os mesmos dados automáticos já existentes.
-- Ajuste apenas visual/funcional na interface.
-- Não altera a planilha nem apaga resultados.
+- Novo botão: "Chaveamento".
+- Aba "Mata-mata" continua com lista de jogos.
+- Aba "Chaveamento" mostra a árvore visual do caminho até a final.
+- O chaveamento é automático e usa os mesmos resultados salvos na planilha.
 
 Integração:
 - Mantém leitura/gravação via Google Sheets + Apps Script.
+- Não apaga resultados.
 
 Senha admin:
 PassaCopa26
