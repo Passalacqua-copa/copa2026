@@ -1,13 +1,13 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 16 — chaveamento e horários revisados.
+Versão 17 — chaveamento mobile com zoom.
 
 Ajustes:
-- Sequência do chaveamento revisada:
-  - J101 recebe J97 x J98.
-  - J102 recebe J99 x J100.
-  - Jogos redistribuídos nos lados esquerdo/direito conforme caminho real até a final.
-- Horários do mata-mata preenchidos em horário de Brasília.
+- No mobile, a aba Chaveamento agora funciona como um mapa.
+- Usuário pode usar dois dedos para aproximar/afastar.
+- Usuário pode arrastar para navegar pela chave.
+- Botões +, -, Ajustar adicionados apenas no mobile.
+- Desktop permanece igual.
 - Mantém leitura/gravação via Google Sheets + Apps Script.
 - Não apaga resultados.
 
