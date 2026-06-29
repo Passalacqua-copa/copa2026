@@ -1,12 +1,13 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 23 — correção final do mata-mata.
+Versão 24 — mata-mata estável.
 
 Correção:
-- Botão "⚽ placar" aparece nos jogos do mata-mata em modo Admin.
-- Botão abre o modal corretamente.
-- Salvamento dos jogos 73 a 104 corrigido.
-- Mantém jogos oficiais do mata-mata, horários revisados e chaveamento mobile com zoom.
+- Mantém a versão com jogos oficiais do mata-mata corrigidos.
+- Injeta o botão "⚽ placar" nos jogos do mata-mata quando estiver em Admin.
+- Botão abre o modal correto.
+- Salvamento dos jogos 73 a 104 mantido.
+- Mantém chaveamento e zoom mobile.
 - Não apaga resultados.
 
 Senha admin:
