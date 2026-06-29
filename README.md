@@ -1,9 +1,10 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 20 — botão de placar no mata-mata.
+Versão 21 — botão mata-mata forçado.
 
 Correção:
-- Botão "⚽ placar" volta a aparecer nos jogos do mata-mata em modo Admin.
+- Renderização própria da aba Mata-mata.
+- Botão "⚽ placar" aparece nos jogos do mata-mata quando o modo Admin está ativo.
 - Mantém salvamento dos jogos 73 a 104.
 - Mantém jogos corrigidos, horários revisados e chaveamento mobile com zoom.
 - Não apaga resultados.
