@@ -1,12 +1,10 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 25 — correção direta na função original.
+Versão 26 — abertura segura do modal.
 
 Correção:
-- A função original `matchHtml` foi alterada para mostrar o botão "⚽ placar" em todos os jogos quando Admin estiver ativo.
-- A função `openMatch` foi alterada para abrir corretamente jogos de mata-mata.
-- `saveMatch` foi alterada para tratar pênaltis em jogos eliminatórios.
-- Mantém confrontos oficiais, horários revisados e chaveamento mobile com zoom.
+- Botão de placar do mata-mata abre por listener global, sem depender de onclick inline.
+- Mantém botão, confrontos oficiais, horários, chaveamento e zoom mobile.
 - Não apaga resultados.
 
 Senha admin:
