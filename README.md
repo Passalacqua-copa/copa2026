@@ -1,12 +1,13 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 28 — resumo e avanço do mata-mata.
+Versão 29 — resolvedor único do mata-mata.
 
 Correções:
-- Resumo diário resolve corretamente nomes dos jogos de mata-mata.
-- Jogos de hoje não aparecem mais como undefined.
-- Vencedor de jogo encerrado no mata-mata avança para a próxima fase.
-- Mantém botão de placar e salvamento do mata-mata.
+- Lista do mata-mata resolve corretamente vencedores.
+- Vencedores avançam para a fase seguinte.
+- Resumo diário não mostra mais undefined.
+- Modal usa o mesmo resolvedor.
+- Mantém salvamento e pênaltis.
 - Não apaga resultados.
 
 Senha admin:
