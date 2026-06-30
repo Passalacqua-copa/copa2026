@@ -1,13 +1,12 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 27 — mata-mata sem recursão.
+Versão 28 — resumo e avanço do mata-mata.
 
 Correções:
-- Eliminada a recursão infinita entre knockoutNames, resolveRef e winnerOf.
-- Botão "⚽ placar" abre o modal também nos jogos 73 a 104.
-- Salvamento do mata-mata mantido.
-- Pênaltis tratados em jogos eliminatórios empatados.
-- Confrontos oficiais, horários, chaveamento e zoom mobile mantidos.
+- Resumo diário resolve corretamente nomes dos jogos de mata-mata.
+- Jogos de hoje não aparecem mais como undefined.
+- Vencedor de jogo encerrado no mata-mata avança para a próxima fase.
+- Mantém botão de placar e salvamento do mata-mata.
 - Não apaga resultados.
 
 Senha admin:
