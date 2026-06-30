@@ -1,11 +1,12 @@
 # Tabela Oficial Passalacqua — Copa 2026
 
-Versão 30 — app limpo.
+Versão 31 — pênaltis e classificação.
 
-Correção:
-- app.js reescrito em bloco único, sem empilhamento de versões antigas.
-- Mantém placar, pênaltis, salvamento na planilha, resumo diário, avanço automático e chaveamento.
-- Corrige regressões do resumo e do mata-mata.
+Correções:
+- Pênaltis do mata-mata não são apagados quando a planilha ainda não devolve pA/pB.
+- Avanço no mata-mata considera pênaltis em jogos empatados.
+- Classificação volta ao formato de cards.
+- Mantém salvamento e resumo da v30.
 - Não apaga resultados.
 
 Senha admin:
